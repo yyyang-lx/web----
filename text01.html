@@ -6,21 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day1布局练习</title>
     <style>
+        /* 1.初始化全局布局：盒子不会被撑大 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* 2.页面根布局：布局一屏幕大小+上下弹性布局 */
         html,
         body {
+            /*页面铺满整个屏幕*/
             height: 100%;
+            /*最小高度占满一屏，内容再多自动拉长*/
             min-height: 100vh;
+            /* 变成弹性盒子*/
             display: flex;
+            /* 在此容器里的子元素按照纵向排列 */
             flex-direction: column;
             font-family: "Microsoft Yahei", sans-serif;
         }
 
+        /* 3.顶部导航栏 */
         header {
             height: 60px;
             background: #80a0bd;
@@ -31,12 +38,13 @@
             font-size: 18px;
         }
 
+        /* 4.中间容器：自动撑开剩余高度 */
         .container {
             flex: 1;
             display: flex;
         }
 
-        /* 左侧菜单 */
+        /* 5.左侧菜单容器 */
         aside {
             width: 200px;
             background: #495f77;
@@ -44,29 +52,41 @@
             padding-top: 10px;
         }
 
+        /* 6.菜单项 */
         .menu-item {
             padding: 14px 24px;
+            /* 鼠标移上去变小手 */
             cursor: pointer;
+            /* 所有变化有0.3s过渡动画 */
             transition: all 0.3s;
+            /* 字号 */
             font-size: 15px;
+            /* 行高 */
             line-height: 1.4;
+            /* 字间距 */
             letter-spacing: 0.5px;
 
         }
 
+        /* 7.菜单项hover效果 */
         .menu-item:hover {
+            /* 背景变深 */
             background: #001528;
+            /* 文字向右缩进，滑动感 */
             padding-left: 30px;
+            /* 文字变绿色 */
             color: #42b9ad;
         }
 
-        /* 右侧内容 */
+        /* 8. 右侧内容区域 */
         main {
+            /* 自动撑开剩余空间（除去左侧菜单栏） */
             flex: 1;
             padding: 20px;
             background: #f3f3f4;
         }
 
+        /* 9. 内容卡片：让内容更有层次感 */
         .content-box {
             background: white;
             padding: 20px;
@@ -74,7 +94,7 @@
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         }
 
-        /* 底部 */
+        /* 10. 底部栏：永远贴在页面最下方 */
         footer {
             height: 50px;
             background: #333;
