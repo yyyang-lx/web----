@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day2review</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5f5f5;
+      padding: 30px;
+      font-family: 'Microsoft YaHei', sans-serif;
+    }
+
+    .card {
+      width: 320px;
+      padding: 24px;
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      margin-bottom: 16px;
+      line-height: 1.5;
+      color: #666;
+    }
+
+    .btn {
+      background-color: #42b983;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #359469;
+    }
+
+    .form-box {
+      width: 320px;
+      padding: 24px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-box h3 {
+      /* font-size: 20px; */
+      margin-bottom: 20px;
+      text-align: center;
+      /* color: #333; */
+    }
+
+    .form-item {
+      margin-bottom: 16px;
+    }
+
+    .form-item input {
+      padding: 0px 10px;
+      width: 100%;
+      outline: none;
+      border: 1px solid #ddd;
+      height: 38px;
+      border-radius: 4px;
+    }
+
+    .form-item input:focus {
+      border-color: #42b983;
+    }
+
+    .btn-block {
+      width: 100%;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h3>卡片标题</h3>
+    <p>这是卡片的描述内容，用来展示信息，是前端最常见的组件之一。</p>
+    <button class="btn">点击操作</button>
+  </div>
+  <div class="form-box">
+    <h3>登录表单</h3>
+    <div class="form-item">
+      <input type="text" placeholder="请输入用户名">
+    </div>
+    <div class="form-item">
+      <input type="password" placeholder="请输入密码">
+    </div>
+    <button class="btn btn-block">登录</button>
+  </div>
+  <!-- 圆角和阴影，边框设置 -->
+</body>
+
+</html>

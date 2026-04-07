@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day1布局练习</title>
+  <style>
+    /* 1.初始化全局布局：盒子不会被撑大 */
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* 2.页面根布局：布局一屏幕大小+上下弹性布局 */
+    html,
+    body {
+      height: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: "Microsoft YaHei", sans-serif;
+    }
+
+    /* 3. 顶部导航栏*/
+    header {
+      height: 60px;
+      background: #5579ab;
+      font-size: 18px;
+      color: white;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* 4.中间内容容器 */
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    /* 5.左侧菜单 */
+    aside {
+      background: #162a45;
+      width: 200px;
+      /* height: 100%; */
+      /* display: flex; */
+      color: white;
+      /* font-size: 16px; */
+      /* align-items: center; */
+      /* 菜单栏离盒子上边距 */
+      padding-top: 50px;
+    }
+
+    /* 4.菜单栏项容器 */
+    .menu-item {
+      padding: 14px 24px;
+      /* border: 1px solid red; */
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 15px;
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      /* background: #2a3f5f; */
+      /* border: 2px solid #001528; */
+      /* width: fit-content; */
+      /* 观察左右边距 */
+    }
+
+    /* .menu-item span { 
+      background: #ff5722;
+      color: white;
+      display: inline-block;
+     给文字也加个小内边距，让橙色块更明显 
+      padding: 2px 4px;
+    }*/
+
+    /* 5.hover效果 */
+    .menu-item:hover {
+      color: #5579ab;
+      background: #001528;
+      padding-left: 30px;
+    }
+
+    /* 6.底部栏 */
+    footer {
+      margin-top: auto;
+      display: flex;
+      height: 50px;
+      background: #000000;
+      color: white;
+      font-size: 15px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* 7.内容卡片 */
+    .content-box {
+      background: white;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 8.主要内容 */
+    main {
+      flex: 1;
+      background: #f3f3f4;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>后台管理系统</header>
+  <div class="container">
+    <aside>
+      <div class="menu-item"><span>首页</span></div>
+      <div class="menu-item"><span>用户管理</span></div>
+      <div class="menu-item"><span>商品管理</span></div>
+      <div class="menu-item"><span>订单管理</span></div>
+      <div class="menu-item"><span>系统设置</span></div>
+    </aside>
+    <main>
+      <div class="content-box">
+        <h2>欢迎来到首页</h2>
+        <br>
+        <p>这里是主内容区域</p>
+      </div>
+    </main>
+  </div>
+
+
+
+  <footer>底部版权</footer>
+</body>
+
+</html>
