@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>案例1练习</title>
+  <style>
+    #box {
+      height: 50px;
+      margin: 20px;
+      background: #f5f5f5;
+    }
+
+    #btn {
+      border: 1px solid #000000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box">我是原始文字</div>
+  <button id="btn">按钮</button>
+  <script>
+    const box = document.getElementById("box")
+    const btn = document.getElementById("btn")
+    btn.onclick = function () {
+      box.style.background = '#555'
+      box.innerText = '我被JS修改了！'
+    }
+  </script>
+</body>
+
+</html>

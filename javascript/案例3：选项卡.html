@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>第三天：选项卡</title>
+  <style>
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin: 20px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      background: #eee;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background: blue;
+      color: white;
+    }
+
+    .content {
+      margin: 20px;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    .item {
+      display: none;
+    }
+
+    .item.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tabs">
+    <div class="tab active">tab1</div>
+    <div class="tab">tab2</div>
+    <div class="tab">tab3</div>
+  </div>
+
+  <div class="content">
+    <div class="item active">内容1</div>
+    <div class="item">内容2</div>
+    <div class="item">内容3</div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const items = document.querySelectorAll(".item");
+
+    for (let i = 0; i < tabs.length; i++) {
+      tabs[i].onclick = function () {
+        // 先全部灭掉active
+        for (let j = 0; j < tabs.length; j++) {
+          tabs[j].classList.remove("active");//删掉active类
+          items[j].classList.remove("active");
+        }
+        // 在给当前点击的元素加上active
+        tabs[i].classList.add("active");//加上active类
+        items[i].classList.add("active");
+      };
+    }
+  </script>
+</body>
+
+</html>

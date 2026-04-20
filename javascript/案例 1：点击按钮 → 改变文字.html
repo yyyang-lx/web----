@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>第一天：点击修改</title>
+  <style>
+    /* 让你看得见！ */
+    #box {
+      padding: 30px;
+      background: #f8f9fa;
+      margin: 20px;
+      border: 1px solid #ddd;
+    }
+
+    #btn {
+      padding: 10px 20px;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="box">我是原始文字</div>
+  <button id="btn">点击我修改文字</button>
+
+  <script>
+    // 1. 获取元素
+    const box = document.getElementById("box");//专门抓取ID元素的函数，不用加#
+    const btn = document.getElementById("btn");
+
+    // 2. 点击事件
+    btn.onclick = function () {
+      box.innerText = "我被 JS 修改啦！";
+      box.style.background = "lightgreen";
+    };
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practice案例2</title>
+  <style>
+    #box {
+      height: 200px;
+      width: 200px;
+      background-color: rgb(140, 223, 241);
+    }
+
+    button {
+      margin: 20px;
+      padding: 20px;
+    }
+
+    #box.hide {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="count">计数：<span id="countSpan">0</span></div>
+  <button id="addBtn">+1</button>
+  <button id="toggleBtn">显示/隐藏</button>
+  <div id="box"></div>
+  <script>
+    // 1.计数
+    let count = 0
+    const addBtn = document.getElementById('addBtn')
+    const countSpan = document.getElementById('countSpan')
+    addBtn.onclick = function () {
+      count++
+      countSpan.innerText = count
+    }
+    // 2.隐藏/显示
+    const toggleBtn = document.getElementById('toggleBtn')
+    const box = document.getElementById('box')
+    toggleBtn.onclick = function () {
+      box.classList.toggle('hide')
+    }
+  </script>
+</body>
+
+</html>

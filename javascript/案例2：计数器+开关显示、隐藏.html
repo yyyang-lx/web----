@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>第二天：计数器 + 开关</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background: lightblue;
+      margin: 20px;
+    }
+
+    /* 两个选择器id和class */
+    #box.hide {
+      display: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>计数：<span id="count">0</span></div>
+  <button id="addBtn">+1</button>
+  <button id="toggleBtn">显示/隐藏盒子</button>
+  <div id="box"></div>
+
+  <script>
+    // 计数器
+    let count = 0;
+    const countSpan = document.getElementById("count");
+    const addBtn = document.getElementById("addBtn");
+
+    addBtn.onclick = function () {
+      count++;
+      countSpan.innerText = count;
+    };
+
+    // 开关盒子
+    const box = document.getElementById("box");
+    const toggleBtn = document.getElementById("toggleBtn");
+
+    toggleBtn.onclick = function () {
+      // toggle是切换括号里是切换的class名字，内部自动动态添加或隐藏hide
+      box.classList.toggle("hide");
+    };
+  </script>
+</body>
+
+</html>
