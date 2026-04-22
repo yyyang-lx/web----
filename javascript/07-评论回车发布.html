@@ -123,6 +123,7 @@
     const total = document.querySelector('.total')
     const item = document.querySelector('.item')
     const text = document.querySelector('.text')
+    const btn = document.querySelector('button')
     //1. 当文本域获得焦点，就让total显示出来
     tx.addEventListener('focus', function () {
       total.style.opacity = 1
@@ -149,6 +150,18 @@
         //字符统计复原
         total.innerHTML = '0/200字'
       }
+    })
+    //5.按下发布按钮发布评论
+    btn.addEventListener('click', function () {
+      if (tx.value.trim()) {
+        item.style.display = 'block'
+        //用户输入内容放入text
+        text.innerHTML = tx.value
+      }
+      //按下回车后结束清空文本域
+      tx.value = ''
+      //字符统计复原
+      total.innerHTML = '0/200字'
     })
   </script>
 
