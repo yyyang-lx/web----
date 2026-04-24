@@ -281,21 +281,23 @@
   </footer>
   <script>
     // 1. 事件委托的方法 获取父元素 tabs-list
-    const list = document.querySelector('.tabs-list')
+    const tabs = document.querySelector('.tabs-list')
     const line = document.querySelector('.line')
-    // 2. 注册点击事件
-    list.addEventListener('click', function (e) {
+    // 2. 注册点击事件(是通过点击父元素让子元素移动)
+    tabs.addEventListener('click', function (e) {
       // 只有点击了A 才有触发效果
-      if (e.target.tagName === 'A') {
+      if (e.target.tagName === 'A')
         // console.log(11)
-        // 当前元素是谁 ？  e.target
-        // 得到当前点击元素的位置
-        // console.log(e.target.offsetLeft)
-        // line.style.transform = 'translateX(100px)'
-        // 把我们点击的a链接盒子的位置  然后移动
         line.style.transform = `translateX(${e.target.offsetLeft}px)`
-      }
+      // 不要忘记px单位
+      // 当前元素是谁 ？  e.target
+      // 得到当前点击元素的位置
+      // console.log(e.target.offsetLeft)
+      // line.style.transform = 'translateX(100px)'
+      // 把我们点击的a链接盒子的位置  然后移动
     })
+
+
 
   </script>
 </body>
